@@ -8,7 +8,7 @@ namespace JY.CSharp.Common.Test
         [TestMethod]
         public void GetIdCardInfo()
         {
-            var idCard = "110101199003078631";
+            var idCard = "342901199110312010";
             var result1 = JY.CSharp.Common.IdCard.IdValidate.CheckIdCard(idCard);
            var result= JY.CSharp.Common.IdCard.IdCardUtility.GetIdCardInfo(idCard);
            

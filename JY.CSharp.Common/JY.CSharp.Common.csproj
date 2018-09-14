@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\ConstellationData.cs" />
+    <Compile Include="Data\IdCardAddressData.cs" />
     <Compile Include="Enums\ChineseZodiac.cs" />
     <Compile Include="Enums\Constellation.cs" />
     <Compile Include="Enums\Sex.cs" />
@@ -59,6 +60,10 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resource\IdCardAddress.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

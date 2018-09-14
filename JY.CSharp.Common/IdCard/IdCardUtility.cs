@@ -47,7 +47,10 @@ namespace JY.CSharp.Common.IdCard
 
         private static IResult<string> GetIdCardAddress(string idNumber)
         {
-            return Result.Success("to do");
+            var addressCode = idNumber.Substring(0, 6);
+            if (!IdCardAddressData.IdCardAddressKeyValuePair.ContainsKey(addressCode))
+                return Result.Failure<string>("未找到符合条件的地址");
+            return Result.Success(IdCardAddressData.IdCardAddressKeyValuePair[addressCode]);
         }
 
         private static IResult<DateTime> GetIdCardBirthday(string idNumber)
